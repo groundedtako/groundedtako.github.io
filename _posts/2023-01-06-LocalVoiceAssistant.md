@@ -251,7 +251,59 @@ Turns out the default token size was a measly 16, setting it to 2048 helpt resol
 
 
 ## Step 3: Connect the text response to a text to speech model
+This is one of the more difficult parts. Apparently, TTS didn't exist in the current version of the openai api. I decided against upgrading openai, because that would break the speech_recognition python pip package, and took a less beautiful approach --- issue a request directly to that endpoint.
 
+I wrote whatever response I got to a file called speech.mp3.
+
+```python
+def generate_tts_response_openai(text):
+    print("Generating tts response...")
+    api_key = config["openai_api_key"]
+    try:
+        # Make a POST request to the /v1/audio/speech endpoint
+        response = requests.post(
+            "https://api.openai.com/v1/audio/speech",
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json"
+            },
+            json={
+                "model": "tts-1",
+                "input": text,
+                "voice": "alloy"
+            }
+        )
+        if os.path.exists('speech.mp3'):
+            os.remove('speech.mp3')
+        
+        # Save the TTS audio to a file
+        with open('speech.mp3', 'wb') as file:
+            file.write(response.content)
+```
+
+And used pygame to play the mp3 file. This is unorthodox. I know. But bear with me. We'll likely update this in the future, as in my limited use, I've already came across multiple issues.
+
+```python
+# Play the saved audio file
+        pygame.init()
+        pygame.mixer.init()
+        pygame.mixer.music.load('speech.mp3')
+        pygame.mixer.music.play()
+
+        # Wait for the audio to finish playing
+        while pygame.mixer.music.get_busy():
+            pygame.time.Clock().tick(10)
+            
+        # Delete the audio file after playing
+        os.remove('speech.mp3')
+```
+
+One of those issues was that I kept on running into a WinError, indicating that the file is constantly busy.
+```txt
+Error generating TTS response: [WinError 32] The process cannot access the file because it is being used by another process: 'speech.mp3'
+```
+
+At this point, the barebone skeleton and functionality of this little application was all implemented.
 
 ## Step 4: Replacing online APIs with offline models
 

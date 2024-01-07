@@ -1,0 +1,15 @@
+.toggle-header-1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+  }
+  
+  .toggle-header-2 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .toggle-header-3 {
+    font-size: 12px;
+    font-style: italic;
+  }
