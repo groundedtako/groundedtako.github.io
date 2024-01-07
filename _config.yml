@@ -34,7 +34,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
+  name: Tako Sensei
   email: example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -127,6 +127,11 @@ kramdown:
       line_numbers: true
       start_line: 1
 
+# use CommonMark to support collapsable markdowns
+# there appears to be a bug where this causes code blocks to ignore new lines
+# unfortunately, this means that we cannot use <details> or <summary> blocks with code blocks
+# markdown: CommonMarkGhPages
+
 collections:
   tabs:
     output: true
@@ -192,3 +197,4 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
