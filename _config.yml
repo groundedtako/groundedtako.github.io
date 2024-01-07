@@ -90,7 +90,7 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: groundedtako/gisRepo
-    repo_id: 740001069
+    repo_id: 738734397
     category: Posts
     category_id: 40960510
     mapping: # optional, default to 'pathname'
