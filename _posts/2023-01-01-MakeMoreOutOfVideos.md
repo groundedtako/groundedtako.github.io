@@ -1,10 +1,17 @@
 ---
 layout: post
-title: "Make More Out of Videos"
+title: "Learn More Out of Videos"
 date: 2023-01-01
 pin: true
 ---
 
-In the past few years, I've spent a considerable amount of time consuming YouTube videos. Most of them are nothing but passtime vods. But every once in a while, I would come across a few cool videos, that demonstrates something that greatly interests me, something that makes me feel like, Hey! How cool is that!
+In recent years, I have dedicated a significant amount of time to consuming YouTube videos. While most are simply pastime VODs, occasionally I stumble upon videos that showcase something of great interest to me, evoking the thought, "Hey! How fascinating!"
 
-99% of the time, that excitement stops at that and nothing else comes out. I think its prime time I make more out of that hobbie. Hence from time to time, I will come across some interesting video, and I'll show my journey of reproducing that video here. In this process, I hope to learn a bit more that just watching the video, create something cool that I can also use, and inspire others to do more! Perhaps other people in my shoes can benefit from a deeper dive into the videos, and create something of your own too!
+However, more often than not, that initial excitement fizzles out without any further action. 
+
+Deeply inspired by one of my favorite YouTubers, Mike Boyd <a href="https://www.youtube.com/@MikeBoyd">(Visit Mike Boyd's YouTube channel)</a>.
+I believe it is time to elevate this pastime into something more meaningful. As a result, I intend to periodically encounter intriguing videos and chronicle my journey of recreating them here. Through this process, I aim to gain insights beyond mere observation, create something valuable for my own use, and motivate others to pursue more. It is possible that individuals in similar circumstances can benefit from delving deeper into these videos and creating something unique of their own. 
+
+
+
+
