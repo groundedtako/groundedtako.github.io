@@ -308,5 +308,8 @@ At this point, the barebone skeleton and functionality of this little applicatio
 ## Step 4: Replacing online APIs with offline models
 
 
+Btw, the link to this project repo is [here](https://github.com/groundedtako/AssistantTako)
+
+
 So I did a little more searching and came across this [article](https://www.darkhackerworld.com/2021/07/open-source-voice-assistants.html#:~:text=7%20Best%20Open%20Source%20Voice%20Assistants%201%201.,Ready%20to%20use%20an%20open-source%20voice%20assistant%20). Many of these options looked very promising, especially Leon, which according to the demo, could be triggered much like Alexa, via certain key words. 
 {: .shadow}
