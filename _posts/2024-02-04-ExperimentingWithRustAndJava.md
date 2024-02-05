@@ -7,7 +7,7 @@ math: true
 img_path: /assets/screenshots/
 ---
 
-<!-- Several years ago, I was introduced to the advantages of using Rust over other programming languages by a knowledgeable friend. While I had read about these benefits and heard other developers discussing them, I had not yet had the opportunity to personally experience or test Rust in a real-world scenario. As someone who prefers to work pragmatically on real-world problems driven by genuine needs, it wasn't until I joined a large tech company with a highly concurrent, throughput-sensitive, and complex software system primarily implemented in Java that I was again met with the urge to explore Rust. However, given the existence of such a legacy system, a complete rewrite of the Java code into Rust is simply out of the picture. That's why I decided to take a different approach and explore the possibility of integrating Rust piece by piece into our existing system.
+<!-- <!-- Several years ago, I was introduced to the advantages of using Rust over other programming languages by a knowledgeable friend. While I had read about these benefits and heard other developers discussing them, I had not yet had the opportunity to personally experience or test Rust in a real-world scenario. As someone who prefers to work pragmatically on real-world problems driven by genuine needs, it wasn't until I joined a large tech company with a highly concurrent, throughput-sensitive, and complex software system primarily implemented in Java that I was again met with the urge to explore Rust. However, given the existence of such a legacy system, a complete rewrite of the Java code into Rust is simply out of the picture. That's why I decided to take a different approach and explore the possibility of integrating Rust piece by piece into our existing system.
 
 This blog documents my first attempt at this problem.
 
@@ -57,7 +57,7 @@ top_level_dir
             - lib.rs
             - pi.rs
         - Cargo.toml
-```
+``` -->
 
 I wanted to keep my java source code in the src directory. Afterall this is still a java project. 
 `rustSrc` houses all my rust code. 
