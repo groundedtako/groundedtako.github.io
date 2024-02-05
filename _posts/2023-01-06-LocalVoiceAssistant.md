@@ -8,6 +8,7 @@ img_path: /assets/screenshots/
 image: 
     path: LocalVoiceAssistant.png
     alt: Local Voice Assistant
+mermaid: true
 ---
 
 In this post, I will document my attempt to create a fast and responsive voice assistant on a Windows machine. This project is inspired by this video:
@@ -303,13 +304,54 @@ One of those issues was that I kept on running into a WinError, indicating that 
 Error generating TTS response: [WinError 32] The process cannot access the file because it is being used by another process: 'speech.mp3'
 ```
 
-At this point, the barebone skeleton and functionality of this little application was all implemented.
+Another fatal flaw in the current implementation is that sometimes the response is too long, which causes the mp3 file generation to become very long. This causes the assistant to respond in a less than timely manner.
 
-## Step 4: Replacing online APIs with offline models
+But at this point, the barebone skeleton and functionality of this little application was all implemented. I felt like it was a good time to study other peoples' codebase to see what ideas I can borrow.
+
+## Step 4: Learning from others
+To recap, the current issues are 
+
+<ul>
+    <li><input type="checkbox" enable checked/> Non-modularized code organization</li>
+    <li><input type="checkbox" enable/> Questionable usage of pygame to play the mp3 media</li>
+    <li><input type="checkbox" enable/> Outdated pip library speech_recognition that hinders openai api upgrade</li>
+    <li><input type="checkbox" enable/> Speech_recognition often generating jibberish</li>
+    <li><input type="checkbox" enable/> Long mp3 file generation time due to long responses</li>
+    <li><input type="checkbox" enable/> File access error of the mp3 file due to busy pipeline</li>
+    <li><input type="checkbox" enable/> A less than ideal UI</li>
+</ul>
+
+I had two sources I can immediately refer to, LinYi's repo, and [Leon](https://www.darkhackerworld.com/2021/07/open-source-voice-assistants.html#:~:text=7%20Best%20Open%20Source%20Voice%20Assistants%201%201.,Ready%20to%20use%20an%20open-source%20voice%20assistant%20).
+
+#### Let's start by modularizing our code.
+
+Let's review the overarching requiremetns. The assistant can take text and speech input. Speech input will be converted to text using Speech recognition. These input will be fed into a LLM model to generate a response. This response is in text, but can be inputted into a TTS model to produce speech. This personal assistant should support commandline interface and a pretty UI.
+
+---
+title: AIAssistant
+---
+```mermaid
+classDiagram
+    UI <|-- CommandlineInterface
+    UI <|-- GUI
+    InputProcessor <|-- TextInputProcessor
+    InputProcessor <|-- SpeechInputProcessor
+    SpeechInputProcessor : +model ProcessorModel
+    ResponseGenerator : +model ResponseModel
+    OutputHandler: +handleResponse(self, response)
+    class InputProcessor{
+        +process_input(self, data)
+    }
+    class ResponseGenerator{
+        +generate_response(self, data, model)
+    }
+```
+
+
+
+## Step 5: Replacing online APIs with offline models
+
+
 
 
 Btw, the link to this project repo is [here](https://github.com/groundedtako/AssistantTako)
-
-
-So I did a little more searching and came across this [article](https://www.darkhackerworld.com/2021/07/open-source-voice-assistants.html#:~:text=7%20Best%20Open%20Source%20Voice%20Assistants%201%201.,Ready%20to%20use%20an%20open-source%20voice%20assistant%20). Many of these options looked very promising, especially Leon, which according to the demo, could be triggered much like Alexa, via certain key words. 
-{: .shadow}
