@@ -112,7 +112,7 @@ JNIEXPORT jdouble JNICALL Java_RunPi_calculatePi
 }
 #endif
 #endif
-``` -->
+```
 
 Using this we create our own Rust implementation. Navigate into RustSrc and create a new Cargo.
 
