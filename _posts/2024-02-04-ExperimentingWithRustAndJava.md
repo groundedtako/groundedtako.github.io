@@ -1,22 +1,21 @@
 ---
 layout: post
-title: "Experimenting Rust With Java"
+title: "Experimenting With Rust and Java"
 date: 2024-01-06
 comments: true
 math: true
 img_path: /assets/screenshots/
-mermaid: true
 ---
 
-Several years ago, I was introduced to the advantages of using Rust over other programming languages by a knowledgeable friend. While I had read about these benefits and heard other developers discussing them, I had not yet had the opportunity to personally experience or test Rust in a real-world scenario. As someone who prefers to work pragmatically on real-world problems driven by genuine needs, it wasn't until I joined a large tech company with a highly concurrent, throughput-sensitive, and complex software system primarily implemented in Java that I was again met with the urge to explore Rust. However, given the existence of such a legacy system, a complete rewrite of the Java code into Rust is simply out of the picture.  That's why I decided to take a different approach and explore the possibility of integrating rust piece by piece into our existing system. 
+Several years ago, I was introduced to the advantages of using Rust over other programming languages by a knowledgeable friend. While I had read about these benefits and heard other developers discussing them, I had not yet had the opportunity to personally experience or test Rust in a real-world scenario. As someone who prefers to work pragmatically on real-world problems driven by genuine needs, it wasn't until I joined a large tech company with a highly concurrent, throughput-sensitive, and complex software system primarily implemented in Java that I was again met with the urge to explore Rust. However, given the existence of such a legacy system, a complete rewrite of the Java code into Rust is simply out of the picture. That's why I decided to take a different approach and explore the possibility of integrating Rust piece by piece into our existing system.
 
-This blog documents my first attempt, this problem.
+This blog documents my first attempt at this problem.
 
-### Problem Statement
+## Problem Statement
 ---
 I wanted to begin with a problem that was given to me by the same wise friend who introduced me to Rust. Think of it as a LeetCode question, if you'd like, and maybe come up with your own solutions if you choose to follow along. Essentially, we want to calculate the value of &pi;.
 
-We decided to use a Monte Carlo simulation to estimate the value of π. In each iteration of the simulation, it generates a random point `(x, y)` within a square with a side length of 2, centered at the origin. Think of it as throwing darts. in the end, we want to see how many darts fell into a circule, and how many darts fell into the square.
+We decided to use a Monte Carlo simulation to estimate the value of π. In each iteration of the simulation, it generates a random point `(x, y)` within a square with a side length of 2, centered at the origin. Think of it as throwing darts. In the end, we want to see how many darts fell into a circle, and how many darts fell into the square.
 
 After all iterations, the method calculates the estimated value of π using the formula: `4.0 * insideCircle / numIterations`. This formula leverages the fact that the ratio of the area of the unit circle to the area of the enclosing square is `π/4`. By multiplying this ratio by 4, the method provides an estimate of π.
 ![MontePi](montePi.png){: .shadow}
@@ -41,7 +40,7 @@ public class PiCalculatorJava {
 ```
 Now, what if we wanted to implement this in Rust, and use it in Java? This mirrors the likley approach I'd be taking in my job if I were to start incorporating Rust in our codebase. So let's see how that's done.
 
-### Introducing Crate-JNI
+## Introducing Crate-JNI
 ---
 Luckily for us, someone has already thought through this use case. A sample documentation can be found at [crate-jni](https://docs.rs/jni/latest/jni/).
 
@@ -67,7 +66,7 @@ I wanted to keep my java source code in the src directory. Afterall this is stil
 `lib` will house the exported JNI libraries that will be consumed by java. 
 
 According to the docs, we should start with our Java classes
-```Java
+```java
 public class RunPi {
     static {
         System.loadLibrary("runpiwithrustandjava");
@@ -138,7 +137,7 @@ jni = "0.21.1"
 crate_type = ["cdylib"]
 ```
 
-### The Rust Implementation
+## The Rust Implementation
 Inside your `pi.rs` implement the following.
 
 ```rust
@@ -186,7 +185,7 @@ cargo build --release
 If all goes well, you should now see your dll under `target/release/yourprojectname.dll`.
 Copy over the dll into `/lib`. 
 
-### Using it in Java
+## Using it in Java
 
 Finally, navigate back to the java source folder. We now need to compile our java code, and also providing where we should pick up our java libraries.
 
@@ -207,5 +206,5 @@ Number inside circle: 17
 Estimated value of PI with 20 iterations: 3.4
 ```
 
-### Food for Thought
+## Food for Thought
 Now that we've successfully incorporated Rust into Java, congratulations are in order. But more importantly, we should ask ourselves, is this really better? Is Rust actually providing us with any sorts of benefit? To find out the answer to these questions. We should probably benchmark our native java implementation and our rust implementations. 
