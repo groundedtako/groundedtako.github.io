@@ -11,13 +11,13 @@ Several years ago, I was introduced to the advantages of using Rust over other p
 
 This blog documents my first attempt at this problem.
 
-<!-- ## Problem Statement
+## Problem Statement
 I wanted to begin with a problem that was given to me by the same wise friend who introduced me to Rust. Think of it as a LeetCode question, if you'd like, and maybe come up with your own solutions if you choose to follow along. Essentially, we want to calculate the value of &pi;.
 
 We decided to use a Monte Carlo simulation to estimate the value of π. In each iteration of the simulation, it generates a random point `(x, y)` within a square with a side length of 2, centered at the origin. Think of it as throwing darts. In the end, we want to see how many darts fell into a circle, and how many darts fell into the square.
 
 After all iterations, the method calculates the estimated value of π using the formula: `4.0 * insideCircle / numIterations`. This formula leverages the fact that the ratio of the area of the unit circle to the area of the enclosing square is `π/4`. By multiplying this ratio by 4, the method provides an estimate of π.
-![MontePi](montePi.png){: .shadow} -->
+![MontePi](montePi.png){: .shadow}
 
 
 Now implmenting this in Java is straight foward. 
@@ -44,7 +44,7 @@ Luckily for us, someone has already thought through this use case. A sample docu
 
 The way this works is by packaging the Rust code into a Java Native Interface Library, and then importing it in your Java applicaiton. 
 
-There are of course other ways to do this, notably using [gRPC](), [RESTful APIs](), etc. We'll explore this at another time. For now, let's stick with JNI, as this seems like the most intuitive way.
+There are of course other ways to do this, notably using [gRPC](https://blog.logrocket.com/rust-and-grpc-a-complete-guide/), [RESTful APIs](https://www.vortexa.com/insights/technology/rust-in-process-java/), etc. We'll explore this at another time. For now, let's stick with JNI, as this seems like the most intuitive way.
 
 I created the following directory structure for this little experiment, following some conventions.
 
