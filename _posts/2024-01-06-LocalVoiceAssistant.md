@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Local Voice Assistant"
-date: 2023-01-06
+date: 2024-01-06
 comments: true
 math: true
 img_path: /assets/screenshots/
@@ -334,11 +334,13 @@ title: AIAssistant
 classDiagram
     UI <|-- CommandlineInterface
     UI <|-- GUI
-    InputProcessor <|-- TextInputProcessor
-    InputProcessor <|-- SpeechInputProcessor
-    SpeechInputProcessor : +model ProcessorModel
-    ResponseGenerator : +model ResponseModel
-    OutputHandler: +handleResponse(self, response)
+    ui, call
+    #1, Create new model(Hear) <implemnet model> hear
+#2 create speechinputprocessor with <hear>
+    UserInputProcessor <|-- TextInputProcessor
+    UserInputProcessor <|-- SpeechInputProcessor
+    SpeechInputProcessor : +model ProcessorModel(Whisper) new model (Hear)
+    DataProcessor : +model ResponseModel
     class InputProcessor{
         +process_input(self, data)
     }
@@ -346,6 +348,12 @@ classDiagram
         +generate_response(self, data, model)
     }
 ```
+#1 
+processor = TextInputProcessor
+List<int> mylist=new arraylist, newLinkedlist
+
+# 2
+processor = UserInputProcessor.create(config.model)
 
 
 

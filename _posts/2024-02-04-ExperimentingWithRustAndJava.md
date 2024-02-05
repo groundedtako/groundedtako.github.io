@@ -5,9 +5,6 @@ date: 2024-01-06
 comments: true
 math: true
 img_path: /assets/screenshots/
-image: 
-    path: LocalVoiceAssistant.png
-    alt: Local Voice Assistant
 mermaid: true
 ---
 
@@ -25,7 +22,7 @@ I wanted to begin with a problem that was given to me by the same wise friend wh
 We decided to use a Monte Carlo simulation to estimate the value of π. In each iteration of the simulation, it generates a random point `(x, y)` within a square with a side length of 2, centered at the origin. Think of it as throwing darts. in the end, we want to see how many darts fell into a circule, and how many darts fell into the square.
 
 After all iterations, the method calculates the estimated value of π using the formula: `4.0 * insideCircle / numIterations`. This formula leverages the fact that the ratio of the area of the unit circle to the area of the enclosing square is `π/4`. By multiplying this ratio by 4, the method provides an estimate of π.
-![MontePi](../assets/screenshots/montePi.png){: .shadow}
+![MontePi](montePi.png){: .shadow}
 
 </details>
 
