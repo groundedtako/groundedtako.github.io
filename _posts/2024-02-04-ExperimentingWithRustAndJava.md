@@ -7,17 +7,17 @@ math: true
 img_path: /assets/screenshots/
 ---
 
-<!-- Several years ago, I was introduced to the advantages of using Rust over other programming languages by a knowledgeable friend. While I had read about these benefits and heard other developers discussing them, I had not yet had the opportunity to personally experience or test Rust in a real-world scenario. As someone who prefers to work pragmatically on real-world problems driven by genuine needs, it wasn't until I joined a large tech company with a highly concurrent, throughput-sensitive, and complex software system primarily implemented in Java that I was again met with the urge to explore Rust. However, given the existence of such a legacy system, a complete rewrite of the Java code into Rust is simply out of the picture. That's why I decided to take a different approach and explore the possibility of integrating Rust piece by piece into our existing system.
+Several years ago, I was introduced to the advantages of using Rust over other programming languages by a knowledgeable friend. While I had read about these benefits and heard other developers discussing them, I had not yet had the opportunity to personally experience or test Rust in a real-world scenario. As someone who prefers to work pragmatically on real-world problems driven by genuine needs, it wasn't until I joined a large tech company with a highly concurrent, throughput-sensitive, and complex software system primarily implemented in Java that I was again met with the urge to explore Rust. However, given the existence of such a legacy system, a complete rewrite of the Java code into Rust is simply out of the picture. That's why I decided to take a different approach and explore the possibility of integrating Rust piece by piece into our existing system.
 
-This blog documents my first attempt at this problem. -->
+This blog documents my first attempt at this problem.
 
-## Problem Statement
+<!-- ## Problem Statement
 I wanted to begin with a problem that was given to me by the same wise friend who introduced me to Rust. Think of it as a LeetCode question, if you'd like, and maybe come up with your own solutions if you choose to follow along. Essentially, we want to calculate the value of &pi;.
 
 We decided to use a Monte Carlo simulation to estimate the value of π. In each iteration of the simulation, it generates a random point `(x, y)` within a square with a side length of 2, centered at the origin. Think of it as throwing darts. In the end, we want to see how many darts fell into a circle, and how many darts fell into the square.
 
 After all iterations, the method calculates the estimated value of π using the formula: `4.0 * insideCircle / numIterations`. This formula leverages the fact that the ratio of the area of the unit circle to the area of the enclosing square is `π/4`. By multiplying this ratio by 4, the method provides an estimate of π.
-![MontePi](montePi.png){: .shadow}
+![MontePi](montePi.png){: .shadow} -->
 
 
 Now implmenting this in Java is straight foward. 
