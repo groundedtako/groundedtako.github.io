@@ -7,7 +7,7 @@ math: true
 img_path: /assets/screenshots/
 ---
 
-Several years ago, I was introduced to the advantages of using Rust over other programming languages by a knowledgeable friend. While I had read about these benefits and heard other developers discussing them, I had not yet had the opportunity to personally experience or test Rust in a real-world scenario. As someone who prefers to work pragmatically on real-world problems driven by genuine needs, it wasn't until I joined a large tech company with a highly concurrent, throughput-sensitive, and complex software system primarily implemented in Java that I was again met with the urge to explore Rust. However, given the existence of such a legacy system, a complete rewrite of the Java code into Rust is simply out of the picture. That's why I decided to take a different approach and explore the possibility of integrating Rust piece by piece into our existing system.
+<!-- Several years ago, I was introduced to the advantages of using Rust over other programming languages by a knowledgeable friend. While I had read about these benefits and heard other developers discussing them, I had not yet had the opportunity to personally experience or test Rust in a real-world scenario. As someone who prefers to work pragmatically on real-world problems driven by genuine needs, it wasn't until I joined a large tech company with a highly concurrent, throughput-sensitive, and complex software system primarily implemented in Java that I was again met with the urge to explore Rust. However, given the existence of such a legacy system, a complete rewrite of the Java code into Rust is simply out of the picture. That's why I decided to take a different approach and explore the possibility of integrating Rust piece by piece into our existing system.
 
 This blog documents my first attempt at this problem.
 
@@ -112,9 +112,9 @@ JNIEXPORT jdouble JNICALL Java_RunPi_calculatePi
 }
 #endif
 #endif
-```
+``` -->
 
-<!-- Using this we create our own Rust implementation. Navigate into RustSrc and create a new Cargo.
+Using this we create our own Rust implementation. Navigate into RustSrc and create a new Cargo.
 
 The docs don't say but we should suffix our command with --lib. This is because we will be generating a library.
 ```
@@ -205,4 +205,4 @@ Estimated value of PI with 20 iterations: 3.4
 ```
 
 ## Food for Thought
-Now that we've successfully incorporated Rust into Java, congratulations are in order. But more importantly, we should ask ourselves, is this really better? Is Rust actually providing us with any sorts of benefit? To find out the answer to these questions. We should probably benchmark our native java implementation and our rust implementations.  -->
+Now that we've successfully incorporated Rust into Java, congratulations are in order. But more importantly, we should ask ourselves, is this really better? Is Rust actually providing us with any sorts of benefit? To find out the answer to these questions. We should probably benchmark our native java implementation and our rust implementations. 
