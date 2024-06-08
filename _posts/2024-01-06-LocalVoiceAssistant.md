@@ -4,7 +4,7 @@ title: "Local Voice Assistant"
 date: 2024-01-06
 comments: true
 math: true
-img_path: /assets/screenshots/
+media_subpath: /assets/screenshots/
 image: 
     path: LocalVoiceAssistant.png
     alt: Local Voice Assistant
