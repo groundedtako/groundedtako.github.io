@@ -113,9 +113,9 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: groundedtako/groundedtako.github.io
-    repo_id: R_kgDOLAgxPQ
-    category: General
-    category_id: DIC_kwDOLAgxPc4CcQHy
+    repo_id: R_kgDOMGhkew
+    category: Announcements
+    category_id: DIC_kwDOMGhke84Cf8cs
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
