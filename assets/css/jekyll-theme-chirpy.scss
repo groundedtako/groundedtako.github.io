@@ -1,0 +1,45 @@
+---
+---
+
+@import 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.highlight-text {
+  color: teal ;
+}
+
+blockquote {
+  padding: 0.5em 10px;
+  margin: 1em 0;
+  border-left: 4px solid #3498db; // Blue provides good contrast on both light and dark
+  font-style: italic;
+  color: #333; // Default color for light mode
+
+  p {
+      margin: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  blockquote {
+      background-color: #42350f; // Dark background for dark theme
+      color: #ccc; // Lighter text color for readability in dark mode
+      border-left-color: #ecf0f1; // A lighter border color that stands out in dark mode
+
+      p {
+          color: inherit; // Ensures text inside p inherits from blockquote
+      }
+  }
+}
+

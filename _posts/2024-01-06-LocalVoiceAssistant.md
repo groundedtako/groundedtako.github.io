@@ -9,6 +9,7 @@ image:
     path: LocalVoiceAssistant.png
     alt: Local Voice Assistant
 mermaid: true
+categories: [Technology]
 ---
 
 In this post, I will document my attempt to create a fast and responsive voice assistant on a Windows machine. This project is inspired by this video:

@@ -16,7 +16,7 @@ timezone: America/Los_Angeles
 
 title: Me, Tako # the main title
 
-tagline: A digital library of my journey # it will display as the sub-title
+tagline: Loading world model... # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
