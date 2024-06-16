@@ -31,6 +31,13 @@ blockquote {
   }
 }
 
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 @media (prefers-color-scheme: dark) {
   blockquote {
       background-color: #42350f; // Dark background for dark theme

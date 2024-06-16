@@ -77,6 +77,11 @@ Further complicating this are the decentralized educational systems across provi
 ### Economic & Psychological reasons
 Another key effect of short-term thinking is the high opportunity cost of education. Economic hypergrowth has also led to a high opportunity cost for education. The abundance of low-skill, well-paying jobs diminishes the perceived value of prolonged education, enticing many to enter the workforce prematurely. What good reason does students have to spend years in school, when they can make a decent living working in a factory? This is a classic case of the tragedy of the commons. The individual benefits from not investing in education, but the society as a whole suffers.
 
+<div class="centered-content">
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Bro has 30 years of experience at 20 <a href="https://t.co/mR1dGU6UaR">pic.twitter.com/mR1dGU6UaR</a></p>&mdash; internet hall of fame (@InternetH0F) <a href="https://twitter.com/InternetH0F/status/1802332844007592205?ref_src=twsrc%5Etfw">June 16, 2024</a></blockquote>
+ <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 ### Societal Reasons
 The authors also identified the fundamentally imbalanced social system in China. The Hukou system, which was introduced by Mao Zedong in 1958, greatly exacerbates these disparities by restricting rural citizens' access to the quality education available in urban areas.The primary goal of Hukou system was to control the movement of population and to better manage the allocation of resources. However, that system might have outlived its usefulness for far too long.
 
