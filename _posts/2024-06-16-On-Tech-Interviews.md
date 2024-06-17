@@ -27,11 +27,11 @@ What, then, would constitute a fair and effective system for hiring today’s to
 ## A Sample Interview Process
 As an example, here's a blueprint for one such interview process:
 Imagine you are interviewing a candidate for a web-based backend development role. 
-> "Do you know anything about server-side rendering?" 
-"Yes!" 
-"Let's try something else, what about HTTP3?" 
-"No, I don't know much about it." 
-"Great! I want you to build a SpringBoot application that utilizes HTTP3 protocol, you have 40 minutes. Explain your thoughts as you go along, you may use any tools you want."
+> "Do you know anything about server-side rendering?" <br>
+> "Yes!" <br>
+> "Let's try something else, what about HTTP3?" <br>
+> "No, I don't know much about it." <br>
+> "Great! I want you to build a SpringBoot application that utilizes HTTP3 protocol, you have 40 minutes. Explain your thoughts as you go along, you may use any tools you want."
 
 In this reimagined interview scenario, the focus shifts from theoretical expertise to practical problem-solving and adaptability. Consider a candidate faced with integrating HTTP3 into a SpringBoot application—a task they are unfamiliar with. This not only simulates an actual challenge they might encounter on the job but also levels the playing field for all candidates. After all, the goal is to gauge potential and adaptability, not merely pre-existing knowledge.
 
