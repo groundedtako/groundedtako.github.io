@@ -5,6 +5,10 @@ date: 2024-06-16
 comments: true
 math: true
 media_subpath: /assets/img/tech-interviews/
+image: 
+    path: hashmap.png
+    alt: HashMap!
+
 categories: [Tech, Thoughts]
 ---
 
