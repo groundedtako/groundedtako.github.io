@@ -1,16 +1,21 @@
 ---
 layout: post
 title: "Rethinking Technical Interviews: A Case for Practical Problem-Solving"
-date: 2024-04-10
+date: 2024-06-16
 comments: true
 math: true
 media_subpath: /assets/img/tech-interviews/
 categories: [Tech, Thoughts]
 ---
 
-Recently, a year and a half into my new software engineering job, I utilized a binary search algorithm to address a relatively simple problem. Initially, I could have implemented a straightforward $O(n^3)$ solution and moved on. Instead, I chose to refine the approach, spending considerable time optimizing it to $O(n^2 \log n)$. After an hour of code review, my colleague reviewed the code and found it overly complex. Given that the problem space n never exceeds 100, I ultimately reverted to the simpler $O(n^3)$ solution, thiking to myself, "Damn... That's another opportunity gone to put all my LeetCoding skills to use..." Jokes aside, this experience led me to ponder the practical use of complex algorithms in everyday software engineering outside of academic exercises.
+<div class="centered-content">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5bId3N7QZec?si=xJKIcoRoD1Lji-qP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-One of the most common questions I ask fellow software engineers is: "When was the last time you used a LeetCode-styled algorithm in your job?" Almost invariably, the answer is <span class="highlight-text">never</span>. This isn't to downplay the importance of algorithms—they are crucial for the high performance of many tools we rely on today. Yet, the reality is that we rarely expect, nor trust junior engineers to implement such complex algorithms that could significantly impact system performance. Despite this, technical interviews remain heavily focused on such topics. Both interviewers and interviewees generally dislike these algorithm-oriented interviews; they often fail to accurately gauge a candidate's potential as a software engineer.
+### When was the last time you wrote an algorithm from scratch?
+Recently, a year and a half into my new software engineering job, I stumbled across the chance to utilize a binary search algorithm on a relatively simple problem. Initially, I could have implemented a straightforward $O(n^3)$ solution and moved on. Instead, I chose to refine the approach, spending considerable time optimizing it to $O(n^2 \log n)$. After an hour of code review, my colleague reviewed the code and found it overly complex. Given that the problem space n never exceeds 100, I ultimately reverted to the simpler $O(n^3)$ solution, thinking to myself, "Damn... Another opportunity to put all my LeetCoding skills to use gone..." Jokes aside, this experience led me to ponder the practical use of complex algorithms in everyday software engineering outside of academic exercises.
+
+One of the most common questions I ask fellow software engineers is: "When was the last time you used a LeetCode-styled algorithm in your job?" Almost invariably, the answer is <span class="highlight-text">never</span>. This isn't to downplay the importance of algorithms—they are crucial for the high performance of many tools we rely on today. Yet, the reality is that we rarely expect, nor trust, nor enable junior engineers to implement such complex algorithms that could significantly impact system performance. Despite this, technical interviews remain heavily focused on such topics. Both interviewers and interviewees generally dislike these algorithm-oriented interviews; they often fail to accurately gauge a candidate's potential as a software engineer.
 
 Then why do we still do it? The prevailing justification for this focus is the supposed low cost of filtering candidates through standardized testing. Proponents argue that excelling in algorithm-oriented interviews correlates with high intellectual abilities and problem-solving skills. However, this is a flawed and unnecessary metric. Afterall, we aren't interviewing hundres, or thousands of candidates. As a pre-screen measure? Sure. But as the final round of in-person technical interviews? Not a good idea. Many candidates simply memorize solutions to common LeetCode questions, undermining the fairness of this approach. Furthermore, the difficulty of questions can vary significantly, allowing some candidates to excel on easier problems while others falter on unfamiliar, harder ones. Even assuming that this method were unbiased, it still begs the question: What value does this filtering provide if the tested skills are seldom used on the job?
 
@@ -52,6 +57,8 @@ Consider the limitations of a dedicated deep learning model that excels in recog
 
 Let's redefine success in technical interviews not by how well candidates can recall solutions, but by how effectively they can navigate new problems with creativity and agility. After all, the real measure of a software engineer’s skill lies not in their ability to solve 'Two Sum' or 'LRU Cache' under controlled conditions, but in their capacity to contribute to a team and tackle genuine challenges they will face in the workplace.
 
+Perhaps, the next time we interview a candidate and ask them what are their thoughts on Object Oriented Programming, their response won't be <span class="highlight-text">*"HashMap"*</span>.
+
 <div class="centered-content">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5bId3N7QZec?si=xJKIcoRoD1Lji-qP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">when my girlfriend asks me how i&#39;m going to save our relationship <a href="https://t.co/QcsDk91QXQ">pic.twitter.com/QcsDk91QXQ</a></p>&mdash; Siddhant Dubey (@sidcodes) <a href="https://twitter.com/sidcodes/status/1550969602708049922?ref_src=twsrc%5Etfw">July 23, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
